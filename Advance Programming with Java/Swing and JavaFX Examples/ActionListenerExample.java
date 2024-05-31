@@ -6,8 +6,8 @@ public class ActionListenerExample {
   public static void main(String[] args) {
     SwingUtilities.invokeLater(() -> {
       JFrame frame = new JFrame("ActionListener Example");
-      JButton button = new JButton("Click me");
       JLabel label = new JLabel();
+      JButton button = new JButton("Click me");
 
       button.addActionListener(new ActionListener() {
         @Override
@@ -15,6 +15,9 @@ public class ActionListenerExample {
           label.setText("Button clicked!");
         }
       });
+
+      // Create an instance of the event handler and assign it to the button
+      button.addActionListener(new ButtonClickHandler(label));
 
       frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
       frame.add(button);

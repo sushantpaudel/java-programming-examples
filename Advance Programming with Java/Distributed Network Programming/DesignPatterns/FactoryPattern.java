@@ -19,7 +19,7 @@ class Rectangle implements Shape {
     }
 }
 
-public class ShapeFactory {
+class ShapeFactory {
     public Shape createShape(String shapeType) {
         if ("Circle".equalsIgnoreCase(shapeType)) {
             return new Circle();
@@ -28,4 +28,8 @@ public class ShapeFactory {
         }
         return null;
     }
+}
+
+public class FactoryPattern {
+
 }

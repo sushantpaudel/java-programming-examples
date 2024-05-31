@@ -1,7 +1,7 @@
 // •	Implement a singleton class "Logger" that maintains a log of messages. Demonstrate how multiple accesses to the logger return the same instance.
 // Singleton Design Pattern
 
-public class Logger {
+class Logger {
     private static Logger instance;
 
     private Logger() {
@@ -18,4 +18,8 @@ public class Logger {
     public void logMessage(String message) {
         System.out.println("Log: " + message);
     }
+}
+
+public class SingletonDesignPattern {
+
 }
